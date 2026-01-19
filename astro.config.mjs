@@ -5,6 +5,7 @@ import { ion } from "starlight-ion-theme";
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
+    base: '/steel-docs/',
     integrations: [
         starlight({
             customCss: [
