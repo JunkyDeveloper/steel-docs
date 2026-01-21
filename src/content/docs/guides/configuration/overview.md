@@ -1,6 +1,6 @@
 ---
 title: Overview Configuration
-description: Gives an overview about server configuration
+description: Gives an overview about server configuration.
 sidebar:
   order: 0
 ---

@@ -1,9 +1,9 @@
 ---
 title: How to decompile minecraft
-description: How to set-up the project and start contributing.
+description: How to decompile the game to use as reference.
 ---
 
-before the 1.21.11 it was obviouscated code so mapping was needed, but this servers target is >=1.21.11 this
+Before the 1.21.11 it was obviouscated code so mapping was needed, but this servers target is >=1.21.11 this
 documentation will only help you with these version.
 
 ## Requirements
@@ -13,7 +13,9 @@ Use the minecraft launcher (also Prism, etc) create an instance with your target
 download the jar file. This is located depending on the launcher and OS but then you have the jar file you can run one
 of the options below.
 
-## There are two ways
+## There are three ways
+
+- using `update-minecraft-src.sh`, our decompile script included on the repo (it uses `gitcraft` as the second way behind scenes)
 
 - view the minecraft source code you can do is clone [gitcraft](https://github.com/WinPlay02/GitCraft), and run
   `./gradlew run --args="--only-stable --min-version=1.21.11 --only-unobfuscated"` it will create

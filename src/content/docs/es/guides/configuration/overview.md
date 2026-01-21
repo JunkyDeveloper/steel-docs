@@ -1,0 +1,14 @@
+---
+title: Configuración general
+description: Un repaso de la configuración del servidor.
+sidebar:
+  order: 0
+---
+
+## Configuración del servidor en SteelMC
+
+Configura tu servidor de SteelMC con opciones y características personalizadas.
+
+## Guías disponibles
+
+- [**Enlaces del servidor**](../server-links) - Configura los enlaces del servidor que se muestran en la pausa

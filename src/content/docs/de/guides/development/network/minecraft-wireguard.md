@@ -65,7 +65,7 @@ Danach **starte Wireshark neu**.
 
 Um eine bessere Übersicht über den Minecraft-Traffic zu erhalten, verwende diesen Filter:
 
-```wireshark
+```
 tcp.port == 25565 || udp.port == 25565
 ```
 
@@ -73,7 +73,7 @@ tcp.port == 25565 || udp.port == 25565
 
 Am Ende werden die Pakete **deutlich lesbarer** sein als rohe Netzwerkdaten, was das Protokoll-Debugging erheblich erleichtert.
 
-![Wireshark view](images/wireshark_output.png "Minecraft packet dissector output")
+![Wireshark view](../../../../../../assets/wireshark_output.webp "Minecraft packet dissector output")
 
 ## Weitere nützliche Ressourcen
 

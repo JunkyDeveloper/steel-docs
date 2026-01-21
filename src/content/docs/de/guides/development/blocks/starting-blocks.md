@@ -52,6 +52,7 @@ Sei **so beschreibend wie möglich** mit dem Dateinamen. Für unser Beispiel:
 Füge das Struct so zu deiner Datei hinzu:
 
 ```rust
+// /steel-core/src/behavior/blocks/iron_bars_block.rs
 pub struct IronBarsBlock {
     block: BlockRef,
 }
@@ -82,6 +83,7 @@ steel-core/src/behavior/blocks/mod.rs
 Es sollte so aussehen:
 
 ```rust
+// /steel-core/src/behavior/blocks/mod.rs
 mod iron_bars_block;
 pub use iron_bars_block::IronBarsBlock;
 ```
@@ -125,6 +127,7 @@ Nur **neuen Code hinzufügen**.
 Erstelle zunächst einen veränderbaren Vektor mit einem beschreibenden Namen:
 
 ```rust
+// /steel-core/build/blocks.rs
 let mut iron_bar_blocks = Vec::new();
 ```
 
@@ -136,6 +139,7 @@ Füge deinen Block-Struct-Namen zum `match`-Statement hinzu.
 Nochmals: **nur deine Zeile hinzufügen**, keine anderen entfernen.
 
 ```rust
+// /steel-core/build/blocks.rs
 for block in blocks {
     let const_ident = to_const_ident(&block.name);
     match block.class.as_str() {
@@ -153,6 +157,7 @@ for block in blocks {
 Definiere nun den Block-Typ-Identifier:
 
 ```rust
+// /steel-core/build/blocks.rs
 let iron_bar_type = Ident::new("IronBarsBlock", Span::call_site());
 ```
 
@@ -163,6 +168,7 @@ let iron_bar_type = Ident::new("IronBarsBlock", Span::call_site());
 Als Nächstes die Registrierungen generieren:
 
 ```rust
+// /steel-core/build/blocks.rs
 let iron_bar_registrations =
     generate_registrations(iron_bar_blocks.iter(), &iron_bar_type);
 ```
@@ -180,6 +186,7 @@ let iron_bar_registrations =
 Beispiel:
 
 ```rust
+// /steel-core/build/blocks.rs
 let output = quote! {
     //! Generated block behavior assignments.
 
