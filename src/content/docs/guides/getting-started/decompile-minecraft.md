@@ -15,6 +15,10 @@ of the options below.
 
 ## There are multiple ways
 
+- the repo has the script `update-minecraft-src.sh` which will do everything for you, so easy to have it local
+
+- you can use an online decompiled version, there you can send links to files to other people. The site is: you can use https://mcsrc.dev/#1/1.21.11_unobfuscated as an alternative
+
 - view the minecraft source code you can do is clone [gitcraft](https://github.com/WinPlay02/GitCraft), and run
   `./gradlew run --args="--only-stable --min-version=1.21.11 --only-unobfuscated"` it will create
   `minecraft-repo-mojmap-unobfuscated-min-1.21.11-stable/minecraft` with all source code
@@ -23,7 +27,6 @@ of the options below.
   ``java -jar vineflower-1.11.2.jar ./minecraft-26.1-snapshot-3-client.jar --folder minecraft_26.1``. That will create a
   folder named `minecraft_26.1`
 
-- you can use an online decompiled version, there you can send links to files to other people. The site is: you can use https://mcsrc.dev/#1/1.21.11_unobfuscated as an alternative
 
 ## Other useful resources
 - videos on YouTube which will give you also a good tutorial
