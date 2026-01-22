@@ -1,6 +1,6 @@
 ---
 title: Set up for users
-description: How to set-up the project and start contributing.
+description: How to set-up a SteelMC based server.
 ---
 
 ### What you will be learning in this guide:

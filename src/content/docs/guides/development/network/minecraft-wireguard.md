@@ -9,7 +9,7 @@ This document describes how to debug Minecraft network traffic to inspect how pa
 
 First, **encryption and compression must be disabled**.
 The compression threshold should be set to **1024**.
-You can find it in this file `config/config.json5`, which will be generated after the first start.
+You can find it in this file `config/steel_config.json5`, which will be generated after the first start.
 
 You will need:
 
@@ -38,10 +38,17 @@ Requirements:
 The best recommendation is to compile the plugin yourself using the instructions in the `ci.yaml` file of the
 repository.
 
+**For Linux:**\
 After compilation, copy the generated `.so` file to:
 
 ```bash
-~/.local/lib/wireshark/plugins/4.6/epan
+~/.local/lib/wireshark/plugins/<Wireshark Version>/epan
+```
+
+**For Windows:**\
+After compilation, copy the generated `.dll` file to:
+```bash
+plugins/<Wireshark Version>/epan
 ```
 
 Adjust the path according to your Wireshark version.
@@ -54,7 +61,7 @@ Clone the protocol data repository:
 
 ## Wireshark Configuration
 
-Start Wireshark (for loopback capture, your user must be in the `wireshark` group).
+Start Wireshark (on Linux, for loopback capture, your user must be in the `wireshark` group).
 
 Then navigate to:
 
@@ -67,7 +74,7 @@ After that, **restart Wireshark**.
 
 To get a better overview of Minecraft traffic, use this filter:
 
-```wireshark
+```
 tcp.port == 25565 || udp.port == 25565
 ```
 
@@ -75,7 +82,7 @@ tcp.port == 25565 || udp.port == 25565
 
 At the end, the packets will be **far more readable** than raw network data, making protocol debugging much easier.
 
-![Wireshark view](images/wireshark_output.png "Minecraft packet dissector output")
+![Wireshark view](../../../../../assets/wireshark_output.webp "Minecraft packet dissector output")
 
 ## Another useful resources
 

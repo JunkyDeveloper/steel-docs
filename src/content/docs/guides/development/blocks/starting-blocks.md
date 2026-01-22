@@ -52,6 +52,7 @@ Be **as descriptive as possible** with the file name. For our example:
 Add the struct like this to your file:
 
 ```rust
+// /steel-core/src/behavior/blocks/iron_bars_block.rs
 pub struct IronBarsBlock {
     block: BlockRef,
 }
@@ -82,6 +83,7 @@ steel-core/src/behavior/blocks/mod.rs
 It should look like this:
 
 ```rust
+// /steel-core/src/behavior/blocks/mod.rs
 mod iron_bars_block;
 pub use iron_bars_block::IronBarsBlock;
 ```
@@ -125,6 +127,7 @@ Do **not remove or modify existing code**, as this could break blocks from other
 First, create a mutable vector with a descriptive name:
 
 ```rust
+// /steel-core/build/blocks.rs
 let mut iron_bar_blocks = Vec::new();
 ```
 
@@ -136,6 +139,7 @@ Add your block struct name to the `match` statement.
 Again: **only add your line**, do not remove others.
 
 ```rust
+// /steel-core/build/blocks.rs
 for block in blocks {
     let const_ident = to_const_ident(&block.name);
     match block.class.as_str() {
@@ -153,6 +157,7 @@ for block in blocks {
 Now define the block type identifier:
 
 ```rust
+// /steel-core/build/blocks.rs
 let iron_bar_type = Ident::new("IronBarsBlock", Span::call_site());
 ```
 
@@ -163,6 +168,7 @@ let iron_bar_type = Ident::new("IronBarsBlock", Span::call_site());
 Next, generate the registrations:
 
 ```rust
+// /steel-core/build/blocks.rs
 let iron_bar_registrations =
     generate_registrations(iron_bar_blocks.iter(), &iron_bar_type);
 ```
@@ -180,6 +186,7 @@ let iron_bar_registrations =
 Example:
 
 ```rust
+// /steel-core/build/blocks.rs
 let output = quote! {
     //! Generated block behavior assignments.
 

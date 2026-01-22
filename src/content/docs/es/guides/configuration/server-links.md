@@ -1,31 +1,29 @@
 ---
-title: How to add server links
-description: Basic undertanding about server links and how to configure them.
+title: Cómo añadir enlaces del servidor
+description: Entendimiento básico de los enlaces del servidor y cómo configurarlos.
 ---
 
-At first what are server links, these give you the option to add in the pause screen of the user links which he can
-click. For example the own marketplace, website of the server, etc.
+Los enlaces del servidor son mostrados en el menú de pausa del juego; su utilidad es proporcionar enlaces personalizados que el usuario pueda abrir. Un ejemplo de ellos es un enlace a la tienda o web del servidor, etc.
 
-There are two things which can be used that are build in options, what will be quick and but not much configuration
-options available. The other option are TextComponents there you can create and style like you want.
+Hay unos cuantos enlaces predeterminados que pueden ser configurados; son más rápidos de configurar, pero carecen de personalización. Alternativamente, es posible usar `TextComponents` para crear enlaces personalizados.
 
-## Enable server links
+## Habilitar los enlaces del servidor
 
-At first server links needed to be activated this will be done then you add to your steel_config.json5 this text:
+Lo primero es encontrar y cambiar este valor en tu archivo `steel_config.json5`:
 
 ```json5
 // /config/steel_config.json5
 server_links: {
-  // Enable server links feature
+  // Activa los enlaces de servidor
   enable: true,
 },
 ```
 
-This needs to be added in the root part of the config, also to deactivate temporarily you can set enable to false.
+Si deseas desactivarlo, solo tienes que cambiarlo a `false`.
 
-## Build-in server links
+## Enlaces del servidor predeterminados
 
-You have 10 build in types for server links these are:
+Existen 10 tipos de enlaces del servidor:
 
 - `bug_report`
 - `community_guidelines`
@@ -38,27 +36,17 @@ You have 10 build in types for server links these are:
 - `news`
 - `announcements`
 
-The only special case is `bug_report` this will be also displayed then the server breaks or throws an exception or send
-malformed data to the client.
+Entre ellos, hay un caso especial, `bug_report`, este también es mostrado cuando el servidor se rompe, hace que el cliente tenga un error o se le envíe información rota.
 
-This can be used like this:
-```json5
-// /config/steel_config.json5
-{
-  label: "bug_report",
-  url: "https://github.com/4lve/SteelMC/issues"
-}
-```
-
-and a full example:
+Este puede ser configurado así:
 ```json5
 // /config/steel_config.json5
 server_links: {
-  // Enable server links feature
+  // Activa los enlaces de servidor
   enable: true,
-  // List of links to display in the server menu
+  // Lista de enlaces que mostrar en el menú
   links: [
-    // Built-in link type (simple string label)
+    // Enlace de tipo predeterminado
     {
       label: "bug_report",
       url: "https://github.com/4lve/SteelMC/issues"
@@ -67,9 +55,11 @@ server_links: {
 },
 ```
 
-## Custom server links
-These are TextComponent So you have a lot more functionality included here for the design with custom text and color.
-This will look like this:
+## Enlaces del servidor personalizados
+
+Este tipo de enlace se define empleando un `TextComponent`, por lo que son más personalizables que los predeterminados, permitiendo añadir colores y estilos.
+
+Estos son configurados de esta manera:
 ```json5
 // /config/steel_config.json5
 {
@@ -81,11 +71,13 @@ This will look like this:
     url: "https://discord.gg/suSXXNdVSf"
 }
 ```
-### Additional resources
-In the web you can find many more tutorials about TextComponent and how to use them correctly
+
+### Recursos adicionales
+
+En esta documentación encontrarás más tutoriales sobre `TextComponents` y cómo usarlos correctamente.
 
 <details>
-<summary>Full example config</summary>
+<summary>Ejemplo completo de configuración</summary>
 
 ```json5
 // /config/steel_config.json5

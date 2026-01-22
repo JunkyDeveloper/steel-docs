@@ -1,9 +1,9 @@
 ---
 title: How to decompile minecraft
-description: How to set-up the project and start contributing.
+description: How to decompile the game to use as reference.
 ---
 
-before the 1.21.11 it was obviouscated code so mapping was needed, but this servers target is >=1.21.11 this
+Before the 1.21.11 it was obviouscated code so mapping was needed, but this servers target is >=1.21.11 this
 documentation will only help you with these version.
 
 ## Requirements
@@ -15,9 +15,9 @@ of the options below.
 
 ## There are multiple ways
 
-- the repo has the script `update-minecraft-src.sh` which will do everything for you, so easy to have it local
+- using `update-minecraft-src.sh`, our decompile script included on the repo (it uses `gitcraft` as the third way behind scenes)
 
-- you can use an online decompiled version, there you can send links to files to other people. The site is: you can use https://mcsrc.dev/#1/1.21.11_unobfuscated as an alternative
+- you can use an online decompiled version, there you can send links to files to other people. The site is: [mcsrc.dev](https://mcsrc.dev) you can use [https://mcsrc.dev/#1/1.21.11_unobfuscated] as an alternative
 
 - view the minecraft source code you can do is clone [gitcraft](https://github.com/WinPlay02/GitCraft), and run
   `./gradlew run --args="--only-stable --min-version=1.21.11 --only-unobfuscated"` it will create

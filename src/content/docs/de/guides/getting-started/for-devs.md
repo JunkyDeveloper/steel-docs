@@ -3,7 +3,7 @@ title: Set up für Entwickler
 description: Wie man das Projekt aufsetzt und mit der Entwicklung beginnt.
 ---
 
-Steel verwendet den dekompilierten Quellcode von Minecraft als Referenz. Eine Anleitung zum Dekompilieren von Minecraft findest du [hier](../decompile-minecraft).
+Steel verwendet den dekompilierten Quellcode von Minecraft als Referenz. Eine Anleitung zum Dekompilieren von Minecraft findest du [hier](../../development/decompile-minecraft).
 
 ## Entwicklungsbereiche
 

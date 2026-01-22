@@ -11,9 +11,10 @@ Es gibt zwei Varianten: Eingebaute Optionen, die schnell einzurichten sind, aber
 
 Zuerst müssen Server-Links aktiviert werden. Dies erfolgt durch Hinzufügen dieses Textes zu deiner steel_config.json5:
 
-```json
+```json5
+// /config/steel_config.json5
 server_links: {
-// Server-Links-Funktion aktivieren
+  // Server-Links-Funktion aktivieren
   enable: true,
 },
 ```
@@ -24,23 +25,22 @@ Dies muss im Root-Teil der Konfiguration hinzugefügt werden. Um es vorübergehe
 
 Es gibt 10 eingebaute Typen für Server-Links:
 
-```
-bug_report = 0,
-community_guidelines = 1,
-support = 2,
-status = 3,
-feedback = 4,
-community = 5,
-website = 6,
-forums = 7,
-news = 8,
-announcements = 9,
-```
+- `bug_report`
+- `community_guidelines`
+- `support`
+- `status`
+- `feedback`
+- `community`
+- `website`
+- `forums`
+- `news`
+- `announcements`
 
 Der einzige Sonderfall ist `bug_report` - dieser wird auch angezeigt, wenn der Server abstürzt, eine Exception wirft oder fehlerhafte Daten an den Client sendet.
 
 Dies kann so verwendet werden:
-```json
+```json5
+// /config/steel_config.json5
 {
   label: "bug_report",
   url: "https://github.com/4lve/SteelMC/issues"
@@ -48,7 +48,8 @@ Dies kann so verwendet werden:
 ```
 
 und ein vollständiges Beispiel:
-```json
+```json5
+// /config/steel_config.json5
 server_links: {
   // Server-Links-Funktion aktivieren
   enable: true,
@@ -66,7 +67,8 @@ server_links: {
 ## Benutzerdefinierte Server-Links
 Dies sind TextComponents, daher hast du viel mehr Funktionalität für das Design mit benutzerdefiniertem Text und Farbe.
 Das sieht so aus:
-```json
+```json5
+// /config/steel_config.json5
 {
     label: {
         text: "Visit the SteelMC Discord",
@@ -79,8 +81,11 @@ Das sieht so aus:
 ### Zusätzliche Ressourcen
 Im Internet findest du viele weitere Tutorials über TextComponent und deren korrekte Verwendung.
 
-## Vollständiges Beispiel-Konfiguration
-```json
+<details>
+<summary>Vollständiges Beispiel-Konfiguration</summary>
+
+```json5
+// /config/steel_config.json5
 {
     $schema: "https://raw.githubusercontent.com/4lve/SteelMC/refs/heads/master/package-content/schema.json5",
     // Server-Port
@@ -144,3 +149,4 @@ Im Internet findest du viele weitere Tutorials über TextComponent und deren kor
     },
 }
 ```
+</details>

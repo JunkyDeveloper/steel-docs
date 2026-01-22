@@ -13,46 +13,80 @@ export default defineConfig({
             ],
             title: {
                 en: 'Steel-Docs',
-                'de': 'Steel-Doku',
+                de: 'Steel-Doku',
+                es: 'Documentacion de Steel',
             },
             social: [{ icon: 'discord', label: 'Discord', href: 'https://discord.gg/MwChEHnAbh' }, { icon: 'github', label: 'GitHub', href: 'https://github.com/4lve/SteelMC' }],
             sidebar: [
                 {
                     label: 'Getting started',
-                    // We don't fore labels here so the pages can either fallback to their (language-specific) title or a sidebar override from the frontmatter!
-                    items: [
-                        { slug: 'guides/getting-started/set-up' },
-                        { slug: 'guides/getting-started/for-users' },
-                        { slug: 'guides/getting-started/for-devs' },
-                        { slug: 'guides/getting-started/decompile-minecraft' },
-                    ],
+                    translations: {
+                        // de: '',
+                        es: 'Primeros pasos',
+                    },
+                    autogenerate: { directory: 'guides/getting-started' },
                 },
                 {
                     label: 'Configuration',
+                    translations: {
+                        // de: '',
+                        es: 'Configuración',
+                    },
                     autogenerate: { directory: 'guides/configuration' },
                 },
                 {
                     label: 'Development',
-                    autogenerate: { directory: 'guides/development' },
+                    translations: {
+                        // de: '',
+                        es: 'Desarrollo',
+                    },
+                    items: [
+                        'guides/development/decompile-minecraft',
+                        {
+                            label: 'Blocks',
+                            translations: {
+                                // de: '',
+                                es: 'Bloques',
+                            },
+                            autogenerate: { directory: 'guides/development/blocks' }
+                        },
+                        {
+                            label: 'Network',
+                            translations: {
+                                // de: '',
+                                es: 'Red',
+                            },
+                            autogenerate: { directory: 'guides/development/network' }
+                        },
+                    ],
                 },
                 {
                     label: 'Reference',
+                    translations: {
+                        // de: '',
+                        es: 'Referencias',
+                    },
                     autogenerate: { directory: 'reference' },
                 },
             ],
 
             defaultLocale: 'root',
             locales: {
-                // English docs in `src/content/docs/en/`
+                // English docs in `src/content/docs/`
                 root: {
                     label: 'English',
                     lang: 'en'
                 },
                 // Sprich Deutsch, du Hurensohn :O) `src/content/docs/de/`
-                'de': {
+                de: {
                     label: 'Deutsch',
                     lang: 'de',
                 },
+                // Documentacion en Español en `src/content/docs/es`
+                es: {
+                    label: 'Spanish',
+                    lang: 'es'
+                }
             },
         }),
     ],
