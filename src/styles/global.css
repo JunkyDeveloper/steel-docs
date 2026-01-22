@@ -7,3 +7,8 @@
 @theme {
     --font-sans: 'Space Mono';
 }
+
+/* Wider content area for ultrawide screens */
+:root {
+    --sl-content-width: 75rem;
+}
