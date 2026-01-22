@@ -14,7 +14,7 @@ SteelMC is configured through a JSON5 configuration file located at `config/stee
 | `server_port` | u16 | `25565` | The port the server listens on (1-65535) |
 | `seed` | String | `""` | World generation seed (empty = random) |
 | `max_players` | u32 | `20` | Maximum players allowed simultaneously |
-| `view_distance` | u8 | `10` | Maximum view distance in chunks (1-64) |
+| `view_distance` | u8 | `10` | Maximum view distance in chunks (1-32) |
 | `simulation_distance` | u8 | `10` | Maximum simulation distance in chunks (1-32) |
 | `motd` | String | `"A Steel Server"` | Message displayed in server list |
 
@@ -27,7 +27,7 @@ SteelMC is configured through a JSON5 configuration file located at `config/stee
 | `enforce_secure_chat` | bool | `false` | Enforce secure chat (requires online_mode and encryption) |
 
 :::caution
-Disabling `online_mode` allows cracked clients to connect. Only disable for private networks or development.
+Disabling `online_mode` allows cracked clients to connect. Only disable if you know what are you doing, or for private networks and development.
 :::
 
 ## Favicon Settings
@@ -55,11 +55,12 @@ Server links are displayed in the multiplayer menu.
 | `server_links.enable` | bool | `true` | Enable server links feature |
 | `server_links.links` | Array | See below | List of links to display |
 
-See [Server Links Guide](/guides/configuration/server-links) for detailed configuration.
+See [Server Links Guide](../server-links) for detailed configuration.
 
 ## Example Configuration
 
 ```json5
+// /config/steel_config.json5
 {
   server_port: 25565,
   seed: "my_awesome_seed",

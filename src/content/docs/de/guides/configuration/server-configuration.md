@@ -14,7 +14,7 @@ SteelMC wird über eine JSON5-Konfigurationsdatei unter `config/steel_config.jso
 | `server_port` | u16 | `25565` | Der Port, auf dem der Server lauscht (1-65535) |
 | `seed` | String | `""` | Weltgenerierungs-Seed (leer = zufällig) |
 | `max_players` | u32 | `20` | Maximale gleichzeitige Spieleranzahl |
-| `view_distance` | u8 | `10` | Maximale Sichtweite in Chunks (1-64) |
+| `view_distance` | u8 | `10` | Maximale Sichtweite in Chunks (1-32) |
 | `simulation_distance` | u8 | `10` | Maximale Simulationsdistanz in Chunks (1-32) |
 | `motd` | String | `"A Steel Server"` | Nachricht in der Serverliste |
 
@@ -55,11 +55,12 @@ Server-Links werden im Multiplayer-Menü angezeigt.
 | `server_links.enable` | bool | `true` | Server-Links-Funktion aktivieren |
 | `server_links.links` | Array | Siehe unten | Liste der anzuzeigenden Links |
 
-Siehe [Server-Links-Anleitung](/de/guides/configuration/server-links) für detaillierte Konfiguration.
+Siehe [Server-Links-Anleitung](../server-links) für detaillierte Konfiguration.
 
 ## Beispielkonfiguration
 
 ```json5
+// /config/steel_config.json5
 {
   server_port: 25565,
   seed: "mein_toller_seed",
