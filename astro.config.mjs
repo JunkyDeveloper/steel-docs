@@ -21,16 +21,14 @@ export default defineConfig({
                 {
                     label: 'Getting started',
                     translations: {
-                        // de: '',
                         es: 'Primeros pasos',
-                        de: 'Aller anfang ist schwer'
+                        de: 'Erste Schritte'
                     },
                     autogenerate: { directory: 'guides/getting-started' },
                 },
                 {
                     label: 'Configuration',
                     translations: {
-                        // de: '',
                         es: 'Configuración',
                         de: 'Konfiguration',
                     },
@@ -39,7 +37,6 @@ export default defineConfig({
                 {
                     label: 'Development',
                     translations: {
-                        // de: '',
                         es: 'Desarrollo',
                         de: 'Entwicklung'
                     },
@@ -48,7 +45,6 @@ export default defineConfig({
                         {
                             label: 'Blocks',
                             translations: {
-                                // de: '',
                                 es: 'Bloques',
                                 de: 'Blöcke',
                             },
@@ -57,7 +53,6 @@ export default defineConfig({
                         {
                             label: 'Network',
                             translations: {
-                                // de: '',
                                 es: 'Red',
                                 de: 'Netzwerk',
                             },
@@ -68,9 +63,8 @@ export default defineConfig({
                 {
                     label: 'Reference',
                     translations: {
-                        // de: '',
                         es: 'Referencias',
-                        de: 'Verlinkungen'
+                        de: 'Referenze'
                     },
                     autogenerate: { directory: 'reference' },
                 },
