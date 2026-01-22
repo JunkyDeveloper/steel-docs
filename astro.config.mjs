@@ -24,6 +24,7 @@ export default defineConfig({
                         { slug: 'guides/getting-started/set-up' },
                         { slug: 'guides/getting-started/for-users' },
                         { slug: 'guides/getting-started/for-devs' },
+                        { slug: 'guides/getting-started/decompile-minecraft' },
                     ],
                 },
                 {

@@ -11,4 +11,11 @@ Konfiguriere deinen SteelMC-Server mit individuellen Einstellungen und Funktione
 
 ## Verfügbare Anleitungen
 
-- [**Server-Links**](../server-links) - Konfiguriere Server-Links, die im Multiplayer-Menü angezeigt werden
+- [**Server-Links**](/de/guides/configuration/server-links) - Konfiguriere Server-Links, die im Multiplayer-Menü angezeigt werden
+
+## Referenzdokumentation
+
+Für vollständige technische Referenzen, siehe:
+
+- [**Server-Konfiguration**](/de/guides/configuration/server-configuration) - Alle Konfigurationsoptionen für steel_config.json5
+- [**Feature Flags**](/de/reference/feature-flags) - Compile-Zeit Feature Flags für individuelle Builds
