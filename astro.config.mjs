@@ -23,6 +23,7 @@ export default defineConfig({
                     translations: {
                         // de: '',
                         es: 'Primeros pasos',
+                        de: 'Aller anfang ist schwer'
                     },
                     autogenerate: { directory: 'guides/getting-started' },
                 },
@@ -31,6 +32,7 @@ export default defineConfig({
                     translations: {
                         // de: '',
                         es: 'Configuración',
+                        de: 'Konfiguration',
                     },
                     autogenerate: { directory: 'guides/configuration' },
                 },
@@ -39,6 +41,7 @@ export default defineConfig({
                     translations: {
                         // de: '',
                         es: 'Desarrollo',
+                        de: 'Entwicklung'
                     },
                     items: [
                         'guides/development/decompile-minecraft',
@@ -47,6 +50,7 @@ export default defineConfig({
                             translations: {
                                 // de: '',
                                 es: 'Bloques',
+                                de: 'Blöcke',
                             },
                             autogenerate: { directory: 'guides/development/blocks' }
                         },
@@ -55,6 +59,7 @@ export default defineConfig({
                             translations: {
                                 // de: '',
                                 es: 'Red',
+                                de: 'Netzwerk',
                             },
                             autogenerate: { directory: 'guides/development/network' }
                         },
@@ -65,6 +70,7 @@ export default defineConfig({
                     translations: {
                         // de: '',
                         es: 'Referencias',
+                        de: 'Verlinkungen'
                     },
                     autogenerate: { directory: 'reference' },
                 },
